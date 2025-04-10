@@ -1,188 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>IntegrationFlow LLC</title>
-    <style>
-        :root {
-            --sap-blue: #0a6ed1;
-            --sap-light-grey: #f4f4f4;
-            --sap-dark: #32363a;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IntegrationFlow LLC</title>
+  <style>
+    :root {
+      --sap-blue: #0a6ed1;
+      --sap-light-grey: #f4f4f4;
+      --sap-dark: #32363a;
+    }
 
-        * {
-            box-sizing: border-box;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Arial, sans-serif;
-            background-color: var(--sap-light-grey);
-            color: var(--sap-dark);
-            scroll-behavior: smooth;
-        }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: var(--sap-light-grey);
+      color: var(--sap-dark);
+      scroll-behavior: smooth;
+      position: relative;
+      min-height: 100vh;
+    }
 
-        nav {
-            background-color: white;
-            border-bottom: 2px solid #ddd;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            text-align: center;
-            padding: 15px 0;
-        }
+    nav {
+      background-color: white;
+      border-bottom: 2px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      text-align: center;
+      padding: 15px 0;
+    }
 
-        nav a {
-            margin: 0 20px;
-            text-decoration: none;
-            font-weight: 600;
-            color: var(--sap-dark);
-        }
+    nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--sap-dark);
+    }
 
-        nav a:hover {
-            color: var(--sap-blue);
-        }
+    nav a:hover {
+      color: var(--sap-blue);
+    }
 
-        section {
-            padding: 60px 20px;
-            text-align: center;
-        }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-        h1, h2 {
-            color: var(--sap-dark);
-            margin-bottom: 10px;
-        }
+    h1, h2 {
+      color: var(--sap-dark);
+      margin-bottom: 10px;
+    }
 
-        h1 {
-            font-size: 2.8rem;
-        }
+    h1 {
+      font-size: 2.8rem;
+    }
 
-        p {
-            max-width: 600px;
-            margin: 0 auto 20px;
-            color: #555;
-        }
+    p {
+      max-width: 600px;
+      margin: 0 auto 20px;
+      color: #555;
+    }
 
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 40px;
-        }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
 
-        .service-box {
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-left: 4px solid var(--sap-blue);
-            border-radius: 6px;
-            padding: 20px;
-            max-width: 260px;
-            text-align: left;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
+    .service-box {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-left: 4px solid var(--sap-blue);
+      border-radius: 6px;
+      padding: 20px;
+      max-width: 260px;
+      text-align: left;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
 
-        form {
-            max-width: 400px;
-            margin: 0 auto;
-            text-align: left;
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: left;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
 
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
 
-        input[type="submit"] {
-            background-color: var(--sap-blue);
-            color: white;
-            border: none;
-            font-weight: bold;
-            cursor: pointer;
-        }
+    input[type="submit"] {
+      background-color: var(--sap-blue);
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-        input[type="submit"]:hover {
-            background-color: #085bb5;
-        }
+    input[type="submit"]:hover {
+      background-color: #085bb5;
+    }
 
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            font-size: 0.9rem;
-            background-color: #fff;
-            border-top: 1px solid #ccc;
-            color: #444;
-        }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      background-color: #fff;
+      border-top: 1px solid #ccc;
+      color: #444;
+    }
 
-        .linkedin-logo img {
-            margin-top: 20px;
-            max-width: 100px;
-        }
-    </style>
+    .linkedin-logo img {
+      margin-top: 20px;
+      max-width: 100px;
+    }
+
+    .logo {
+      max-width: 220px;
+      margin-bottom: 30px;
+    }
+
+    .cert-badge {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 80px;
+      opacity: 0.9;
+      transition: transform 0.3s ease;
+      z-index: 999;
+    }
+
+    .cert-badge:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
 
-    <nav>
-        <a href="#welcome">Home</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <nav>
+    <a href="#welcome">Welcome</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<section id="welcome">
-    <img src="logo.png" alt="IntegrationFlow Logo" style="max-width: 200px; margin-bottom: 20px;" />
+  <section id="welcome">
+    <img src="https://raw.githubusercontent.com/to-pe/IntegrationFlow/refs/heads/main/image.png" alt="IntegrationFlow Logo" class="logo" />
     <h1>Welcome to IntegrationFlow LLC</h1>
     <p>We specialize in SAP integrations — enabling smart, scalable and secure connections across your landscape.</p>
     <div class="linkedin-logo">
-        <a href="https://www.linkedin.com/in/tom-peters-/" target="_blank">
-            <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Logo.svg.original.svg" alt="LinkedIn">
-        </a>
+      <a href="https://www.linkedin.com/in/tom-peters-/" target="_blank">
+        <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Logo.svg.original.svg" alt="LinkedIn">
+      </a>
     </div>
-</section>
+  </section>
 
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="services">
-            <div class="service-box">
-                <h3>SAP CPI</h3>
-                <p>Design and implement Cloud Integration flows in SAP BTP using best practices for scalability and maintainability.</p>
-            </div>
-            <div class="service-box">
-                <h3>API Integration</h3>
-                <p>Secure REST/SOAP API integration with SAP and third-party platforms, including authentication and monitoring.</p>
-            </div>
-            <div class="service-box">
-                <h3>SuccessFactors Integration</h3>
-                <p>Deep expertise in integrating SAP SuccessFactors modules with SAP ERP, S/4HANA and external HR tools.</p>
-            </div>
-        </div>
-    </section>
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service-box">
+        <h3>SAP CPI</h3>
+        <p>Design and implement Cloud Integration flows in SAP BTP using best practices for scalability and maintainability.</p>
+      </div>
+      <div class="service-box">
+        <h3>API Integration</h3>
+        <p>Secure REST/SOAP API integration with SAP and third-party platforms, including authentication and monitoring.</p>
+      </div>
+      <div class="service-box">
+        <h3>SuccessFactors Integration</h3>
+        <p>Deep expertise in integrating SAP SuccessFactors modules with SAP ERP, S/4HANA and external HR tools.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Let's talk about your integration challenges. We're happy to help.</p>
-        <form method="POST" action="https://formsubmit.co/info@integrationflow.net">
-            <input type="hidden" name="_subject" value="New message from IntegrationFlow contact form">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <input type="submit" value="Send Message">
-        </form>
-    </section>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Let's talk about your integration challenges. We're happy to help.</p>
+    <form method="POST" action="https://formsubmit.co/info@integrationflow.net">
+      <input type="hidden" name="_subject" value="New message from IntegrationFlow contact form">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <input type="submit" value="Send Message">
+    </form>
+  </section>
 
-    <footer>
-        &copy; 2025 IntegrationFlow LLC — Tom Peters | info@integrationflow.net
-    </footer>
+  <footer>
+    &copy; 2025 IntegrationFlow LLC — Tom Peters | info@integrationflow.net
+  </footer>
 
+  <!-- SAP Certification Badge -->
+  <img src="https://community.sap.com/legacyfs/online/storage/blog_attachments/2023/09/Certification_image.png"
+       alt="SAP Certified Integration Suite"
+       class="cert-badge" />
 </body>
 </html>
