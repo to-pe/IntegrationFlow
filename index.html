@@ -21,8 +21,6 @@
       background-color: var(--sap-light-grey);
       color: var(--sap-dark);
       scroll-behavior: smooth;
-      position: relative;
-      min-height: 100vh;
     }
 
     nav {
@@ -31,18 +29,28 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      text-align: center;
-      padding: 15px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
     }
 
-    nav a {
-      margin: 0 20px;
+    .nav-logo img {
+      height: 40px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
       text-decoration: none;
       font-weight: 600;
       color: var(--sap-dark);
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       color: var(--sap-blue);
     }
 
@@ -118,12 +126,28 @@
     }
 
     footer {
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       padding: 40px 20px;
-      font-size: 0.9rem;
       background-color: #fff;
       border-top: 1px solid #ccc;
       color: #444;
+      flex-wrap: wrap;
+    }
+
+    footer .footer-text {
+      font-size: 1rem;
+      text-align: left;
+    }
+
+    footer .footer-cert {
+      text-align: right;
+    }
+
+    footer .footer-cert img {
+      max-height: 100px;
+      width: auto;
     }
 
     .linkedin-logo img {
@@ -131,36 +155,44 @@
       max-width: 100px;
     }
 
-    .logo {
-      max-width: 220px;
-      margin-bottom: 30px;
-    }
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
 
-    .cert-badge {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 80px;
-      opacity: 0.9;
-      transition: transform 0.3s ease;
-      z-index: 999;
-    }
+      .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
 
-    .cert-badge:hover {
-      transform: scale(1.05);
+      footer {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      footer .footer-cert {
+        margin-top: 20px;
+      }
     }
   </style>
 </head>
 <body>
 
   <nav>
-    <a href="#welcome">Welcome</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+    <div class="nav-logo">
+      <a href="#welcome">
+        <img src="https://raw.githubusercontent.com/to-pe/IntegrationFlow/refs/heads/main/logoSmall.png" alt="IntegrationFlow Logo" />
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="#welcome">Welcome</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
 
   <section id="welcome">
-    <img src="https://raw.githubusercontent.com/to-pe/IntegrationFlow/refs/heads/main/image.png" alt="IntegrationFlow Logo" class="logo" />
     <h1>Welcome to IntegrationFlow LLC</h1>
     <p>We specialize in SAP integrations — enabling smart, scalable and secure connections across your landscape.</p>
     <div class="linkedin-logo">
@@ -202,12 +234,14 @@
   </section>
 
   <footer>
-    &copy; 2025 IntegrationFlow LLC — Tom Peters | info@integrationflow.net
+    <div class="footer-text">
+      &copy; 2025 IntegrationFlow LLC — Tom Peters | info@integrationflow.net
+    </div>
+    <div class="footer-cert">
+      <img src="https://community.sap.com/legacyfs/online/storage/blog_attachments/2023/09/Certification_image.png"
+           alt="SAP Certified Integration Suite" />
+    </div>
   </footer>
 
-  <!-- SAP Certification Badge -->
-  <img src="https://community.sap.com/legacyfs/online/storage/blog_attachments/2023/09/Certification_image.png"
-       alt="SAP Certified Integration Suite"
-       class="cert-badge" />
 </body>
 </html>
