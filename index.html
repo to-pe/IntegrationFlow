@@ -29,29 +29,15 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 30px;
+      text-align: center;
+      padding: 12px 0;
     }
 
     .nav-logo img {
-      height: 40px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 20px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      font-weight: 600;
-      color: var(--sap-dark);
-    }
-
-    .nav-links a:hover {
-      color: var(--sap-blue);
+      height: 50px;
+      object-fit: cover;
+      object-position: 2px center; /* shift image slightly right */
+      clip-path: inset(0 0 0 2px); /* crop 2px from the left side */
     }
 
     section {
@@ -156,16 +142,6 @@
     }
 
     @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .nav-links {
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-
       footer {
         flex-direction: column;
         text-align: center;
@@ -181,14 +157,7 @@
 
   <nav>
     <div class="nav-logo">
-      <a href="#welcome">
-        <img src="https://raw.githubusercontent.com/to-pe/IntegrationFlow/refs/heads/main/logoSmall.png" alt="IntegrationFlow Logo" />
-      </a>
-    </div>
-    <div class="nav-links">
-      <a href="#welcome">Welcome</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
+      <img src="https://raw.githubusercontent.com/to-pe/IntegrationFlow/refs/heads/main/logoSmall.png" alt="IntegrationFlow Logo" />
     </div>
   </nav>
 
