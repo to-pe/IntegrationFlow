@@ -1,40 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>IntegrationFlow LLC</title>
     <style>
+        :root {
+            --sap-blue: #0a6ed1;
+            --sap-light-grey: #f4f4f4;
+            --sap-dark: #32363a;
+        }
+
         * {
             box-sizing: border-box;
         }
 
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: var(--sap-light-grey);
+            color: var(--sap-dark);
             scroll-behavior: smooth;
         }
 
         nav {
-            background-color: #ffffff;
-            border-bottom: 1px solid #ccc;
+            background-color: white;
+            border-bottom: 2px solid #ddd;
             position: sticky;
             top: 0;
             z-index: 1000;
-            padding: 10px 0;
             text-align: center;
+            padding: 15px 0;
         }
 
         nav a {
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
-            color: #333;
-            font-weight: bold;
+            font-weight: 600;
+            color: var(--sap-dark);
         }
 
         nav a:hover {
-            color: #0077b5;
+            color: var(--sap-blue);
         }
 
         section {
@@ -43,13 +50,18 @@
         }
 
         h1, h2 {
-            color: #333;
+            color: var(--sap-dark);
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
         }
 
         p {
-            color: #666;
             max-width: 600px;
-            margin: 10px auto;
+            margin: 0 auto 20px;
+            color: #555;
         }
 
         .services {
@@ -61,18 +73,24 @@
         }
 
         .service-box {
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-left: 4px solid var(--sap-blue);
+            border-radius: 6px;
             padding: 20px;
-            max-width: 250px;
+            max-width: 260px;
             text-align: left;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
         form {
             max-width: 400px;
             margin: 0 auto;
             text-align: left;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
 
         input, textarea {
@@ -82,23 +100,27 @@
             margin-bottom: 20px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            font-size: 1rem;
         }
 
         input[type="submit"] {
-            background-color: #0077b5;
+            background-color: var(--sap-blue);
             color: white;
             border: none;
+            font-weight: bold;
             cursor: pointer;
         }
 
         input[type="submit"]:hover {
-            background-color: #005f91;
+            background-color: #085bb5;
         }
 
         footer {
             text-align: center;
-            padding: 30px 20px;
+            padding: 40px 20px;
             font-size: 0.9rem;
+            background-color: #fff;
+            border-top: 1px solid #ccc;
             color: #444;
         }
 
@@ -118,7 +140,7 @@
 
     <section id="welcome">
         <h1>Welcome to IntegrationFlow LLC</h1>
-        <p>Your trusted partner for SAP integration and digital transformation.</p>
+        <p>We specialize in SAP integrations — enabling smart, scalable and secure connections across your landscape.</p>
         <div class="linkedin-logo">
             <a href="https://www.linkedin.com/in/tom-peters-/" target="_blank">
                 <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Logo.svg.original.svg" alt="LinkedIn">
@@ -131,23 +153,25 @@
         <div class="services">
             <div class="service-box">
                 <h3>SAP CPI</h3>
-                <p>Build and manage cloud integration flows using SAP Cloud Platform Integration Suite.</p>
+                <p>Design and implement Cloud Integration flows in SAP BTP using best practices for scalability and maintainability.</p>
             </div>
             <div class="service-box">
                 <h3>API Integration</h3>
-                <p>Connect on-premise and cloud systems using modern REST/SOAP APIs and security best practices.</p>
+                <p>Secure REST/SOAP API integration with SAP and third-party platforms, including authentication and monitoring.</p>
             </div>
             <div class="service-box">
                 <h3>SuccessFactors Integration</h3>
-                <p>End-to-end integrations for SAP SuccessFactors — from Core HR to Recruiting, Payroll, and more.</p>
+                <p>Deep expertise in integrating SAP SuccessFactors modules with SAP ERP, S/4HANA and external HR tools.</p>
             </div>
         </div>
     </section>
 
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>Let’s connect. Send a message and we’ll get back to you shortly.</p>
-        <form name="contact-form" method="POST" action="https://formspree.io/f/yourformid">
+        <p>Let's talk about your integration challenges. We're happy to help.</p>
+        <form method="POST" action="https://formsubmit.co/info@integrationflow.net">
+            <input type="hidden" name="_subject" value="New message from IntegrationFlow contact form">
+            <input type="hidden" name="_captcha" value="false">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
@@ -156,7 +180,7 @@
     </section>
 
     <footer>
-        &copy; 2025 IntegrationFlow LLC — Tom Peters, SAP Integration Specialist
+        &copy; 2025 IntegrationFlow LLC — Tom Peters | info@integrationflow.net
     </footer>
 
 </body>
